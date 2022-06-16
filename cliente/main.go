@@ -16,13 +16,13 @@ func main() {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*5)
 	defer cancel()
 
-	// Preparando Request
+	// Preparando Request 
 	req, err := http.NewRequestWithContext(ctx, "GET", "http://localhost:8080", nil)
 	if err != nil {
 		log.Fatalf("Error creating request: %v", err)
 	}
 
-	// Executando request
+	// Executando Request
 	res, err := http.DefaultClient.Do(req)
 	if err != nil {
 		log.Fatalf("Error: %v", err)
